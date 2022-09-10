@@ -30,8 +30,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: https://github.com/mrxshinji/FE_Mentor-Interactive-rating-component
-- Live Site URL: https://mrxshinji.github.io/FE_Mentor-Interactive-rating-component/
+- Solution URL: https://github.com/mrxshinji/FE-mentor-Intro-component
+- Live Site URL: https://mrxshinji.github.io/FE-mentor-Intro-component//
 
 ## My process
 
