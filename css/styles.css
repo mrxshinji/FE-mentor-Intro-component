@@ -1,0 +1,287 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%) ;
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark_blue: hsl(249, 10%, 26%);
+    --Grayish_Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    background-color: var(--red);
+    background-image: url("../images/bg-intro-mobile.png");
+    background-position: left top;
+    opacity: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-size: 16px;
+
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro__form {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+
+h1, p {
+    color: white;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.content h1{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.content p {
+    text-align: center;
+    margin: 0 2em 2rem 2em;
+    font-size: 14px
+}
+
+.subheading {
+    background-color: var(--blue);
+    border-radius: 10px;
+    box-shadow: 0 5px rgba(0,0,0,0.2);
+    text-align: center;
+    height: 70px;
+    width: 85%;
+    padding: 0 5% 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.subheading p {
+    margin: 0 10% 0 10%;
+}
+
+span.bold {
+    font-weight: 700;
+}
+
+#form__card {
+    background-color:  white;
+    border-radius: 10px;
+    width: 85%;
+    padding: 5% 5% 3% 5%;
+    box-shadow: 0 10px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    outline: none;
+}
+
+#form__card input {
+    width: 70vw;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--Grayish_Blue);
+    padding-left: 5%;
+    transition: 0.5s;
+}
+
+#form__card input.red::placeholder {
+    color: var(--red);
+}
+
+.inp:focus {
+    border-color: var(--red) !important;
+}
+
+.tos {
+    text-align: center;
+}
+
+.tos p {
+    font-size: 13px;
+    color: var(--Grayish_Blue);
+}
+
+.redFont {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.btn {
+    background-color: var(--green);
+}
+
+.btn:hover, .btn:active  {
+    background-color: hsl(154, 70%, 55%);
+}
+
+div.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /*TO ANIMATE*/
+    margin-top: 1em;
+    margin-top: 1em;
+    transition: 0.5sec;
+}
+
+p.invalidText {
+    display: none; /*TO ANIMaTE  */
+    color: var(--red);
+    text-align: end;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    transition: 0.5sec;
+}
+
+img.errorIcon {
+    display: none; /*TO ANIMATE */
+    align-self: flex-start; /*TO ANIMATE  */
+    position: absolute;
+    transform: translateY(-40%) translateX(-10px);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+
+@media only screen and (min-width: 414px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15% 0 15%;
+    }
+
+    #intro__form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content h1 {
+        text-align: center;
+        font-size: 3em;
+    }
+    .content p {
+        text-align: center;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    #form__card {
+        height: auto;
+        width: 70%;
+        max-width: 700px;
+        padding-top: 0%;
+    }
+
+    #form__card input {
+        width: 60vw;
+        
+    }
+
+    .subheading{
+        margin-top: 5%;
+        width: 70%;
+        max-width: 700px;
+    }
+    
+    div.inputBox {
+        margin: 2rem 0 2rem 0;
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0% 0 15%;
+        max-width: 909px;
+    }
+    .content h1 {
+        text-align: start;
+        font-size: 3em;
+    }
+    .content p {
+        text-align: start;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    #form__card input {
+        width: 25vw;
+        
+    }
+}
